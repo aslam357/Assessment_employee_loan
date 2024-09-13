@@ -1,0 +1,23 @@
+<odoo>
+  <data>
+   
+   <record id="employee_loan_type" model="ir.ui.view">
+    <field name="name">employee.loan.type.form</field>
+    <field name="model">employee.loan.type</field>
+    <field name= "arch" type="xml">
+      <form string = "Employee LOan Type">
+        <group>
+          <field name = "name" />
+          <field  name = "loan_limit"/>
+          <field name = "interest_rate"/>
+          <field name = "account_id"/>
+        </group>
+      </form>
+   </field>
+   </record>
+   
+
+   <menuitem id="menu_employee_loan_root" name="Loan" />
+   <menuitem id="menu_employee_loan_type" name= "loan types" parent="menu_employee_loan_root" action = "action_employee_loan_type"/>
+  </data>
+</odoo>
